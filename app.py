@@ -24,7 +24,6 @@ class API:
         :param figure: Determine which figure is currently being moved
         :param current_field: Check if the move is possible
         :return: A list of available moves for a given figure and field
-        :doc-author: Trelent
         """
         if figure == "king":
             return jsonify(king.check_message(current_field)[0])
@@ -51,7 +50,6 @@ class API:
         :param current_field: Get the current position of the piece
         :param dest_field: Check if the destination field is occupied by a figure of the same color
         :return: A json object with the following structure:
-        :doc-author: Trelent
         """
         if figure == "king":
             return jsonify(king.validate_message(current_field, dest_field))
@@ -78,7 +76,6 @@ class API:
 
         :param e: Pass in the error message that is generated when a user tries to access a page that doesn't exist
         :return: A 404 error message
-        :doc-author: Trelent
         """
         return jsonify(str(e)), 404
 
@@ -92,7 +89,6 @@ class API:
 
         :param e: Represent the current state of the board
         :return: A list of the variables that are in conflict with variable e
-        :doc-author: Trelent
         """
         return jsonify(str(e)), 409
 

@@ -20,7 +20,6 @@ class Figure(ABC):
 
         :param self: Refer to the object itself
         :return: A list of all the possible moves that can be made by a player
-        :doc-author: Trelent
         """
         pass
 
@@ -34,7 +33,6 @@ class Figure(ABC):
         :param self: Access the class attributes
         :param dest_field: Check if the destination field is empty
         :return: A boolean value
-        :doc-author: Trelent
         """
         pass
 
@@ -51,7 +49,6 @@ class Figure(ABC):
         :param self: Access the class attributes and methods
         :param current_field: Check if the current field is equal to the field that was sent by the user
         :return: A list of dictionaries, which contains the available moves for the selected figure and some other information
-        :doc-author: Trelent
         """
         if self.current_field == current_field:
             template = [
@@ -103,7 +100,6 @@ class Figure(ABC):
         :param current_field: Determine the current position of the figure
         :param dest_field: Check if the destination field is occupied by another figure
         :return: A dictionary with the following keys:
-        :doc-author: Trelent
         """
         move, error = self.validate_move(dest_field)
         if move == "valid":

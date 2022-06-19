@@ -15,7 +15,7 @@ class Pawn(Figure):
         row = current_index[0] + d[0]
         col = current_index[1] + d[1]
         if -1 < row < 8 and 8 > col > -1:
-            return self.board.fields[row][col]
+            return [self.board.fields[row][col]]
 
     def validate_move(self, dest_field):
         if (
